@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>A10</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 40px;
+		}
+		#cookies {
+			padding: 10px;
+			background: #f0f0f0;
+			border: 1px solid #ccc;
+			width: 300px;
+		}
+		button {
+			margin-top: 16px;
+			padding: 8px 16px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h2>IS117-001 A10</h2>
+	<div id="cookies"></div>
+	<button onclick="setCookie()">Set Cookie</button>
+	<p>&copy; Ethan V, November 18 2025</p>
+	<script>
+		function setCookie() {
+			document.cookie = "username=Student123; path=/; max-age=86400";  
+			displayCookie();
+		}
+
+		function displayCookie() {
+			let cookies = document.cookie;
+			document.getElementById("cookies").innerHTML = "<strong>Current Cookies:</strong><br>" + (cookies || "No cookies found.");
+		}
+
+		window.onload = displayCookie;
+	</script>
+</body>
+</html>
